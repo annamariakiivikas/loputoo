@@ -1,44 +1,56 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="et" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pandivere Tuulik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans text-gray-800">
+<body class="font-sans font-medium text-gray-800 m-0">
 
-    <!-- Navigeerimisriba -->
-    <header class="flex justify-between items-center px-8 py-4 bg-white shadow">
-        <div class="flex items-center space-x-2">
-            <img src="./images/pandivere-12.svg" alt="Pandivere Tuulik logo" class="h-6">
-            <span class="font-semibold">Pandivere Tuulik</span>
+    <header id="header"
+        class="fixed top-0 left-0 w-full z-20 flex justify-between items-center px-24 bg-transparent transition-colors duration-300 text-[#f3efeb]">
+        <div class="w-[268px]">
+            <img src="./images/pandivere-12.svg" alt="Pandivere logo">
         </div>
-        <nav class="space-x-6 text-sm hidden md:flex">
-            <a href="#" class="hover:underline">Tuulikust</a>
-            <a href="#" class="hover:underline">Üritused</a>
-            <a href="#" class="hover:underline">E-Pood</a>
-            <a href="#" class="hover:underline">Kontakt</a>
-            <a href="#" class="hover:underline">Ostukorv (0)</a>
-            <button class="border px-4 py-1 rounded-full text-sm">Toeta tuulikut</button>
+        <nav id="navLinks" class="space-x-8 text-lg tracking-wide hidden md:flex items-center">
+            <a href="#tuulikust" class="hover:underline">Tuulikust</a>
+            <a href="#uritused" class="hover:underline">Üritused</a>
+            <a href="#epood" class="hover:underline">E-Pood</a>
+            <a href="#kontakt" class="hover:underline">Kontakt</a>
+            <a href="#ostukorv" class="hover:underline">Ostukorv (0)</a>
+            <button id="supportBtn"
+                class="bg-transparent text-white px-12 py-1 border border-white rounded-full text-md hover:bg-gray-100 hover:text-black transition">
+                Toeta tuulikut
+            </button>
         </nav>
     </header>
 
-    <!-- Hero sektsioon -->
-    <section class="relative h-[600px] flex items-center justify-center text-white text-center">
+    <section id="hero" class="relative h-screen flex items-center justify-end text-white text-left">
         <img src="./images/tuulik 4.png" alt="Pandivere tuulik" class="absolute inset-0 w-full h-full object-cover z-0">
-        <div class="absolute inset-0 bg-black/40 z-10"></div>
-        <div class="relative z-20 max-w-xl">
-            <h1 class="text-3xl md:text-4xl font-semibold mb-4">Tule kogu perega veski­seiklusele!</h1>
-            <button class="bg-white text-gray-800 px-6 py-2 rounded-full text-sm hover:bg-gray-100">Vaata
-                üritusi</button>
+        <div class="absolute inset-0 bg-black/20 z-10"></div>
+        <div class="relative z-20 max-w-xl me-[70px]">
+            <h1 class="text-4xl leading-8 md:text-5xl mb-4">Tule kogu perega veskiseiklusele!</h1>
+            <button
+                class="bg-transparent text-white px-12 py-1 border border-white rounded-full text-md hover:bg-gray-100 hover:text-black transition">
+                Vaata üritusi
+            </button>
         </div>
     </section>
 
-    <!-- Ajaloo sektsioon -->
-    <section class="flex flex-col md:flex-row items-center gap-10 px-8 py-16 max-w-6xl mx-auto">
+    <section id="tuulikust" class="flex flex-col md:flex-row items-center gap-10 px-8 py-16 max-w-6xl mx-auto">
         <div class="md:w-1/2">
             <h2 class="text-xl font-semibold mb-4">Pandivere tuuliku ajalugu</h2>
             <p class="text-sm text-gray-600 mb-4">
@@ -53,13 +65,11 @@
         </div>
     </section>
 
-    <!-- Asutaja tutvustus koos karusselliga -->
     <section class="bg-[#5b3b29] text-white py-16 relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-xl font-semibold mb-6">Pandivere Tuuliku rajajad</h2>
             <div id="carousel" class="relative">
-                <div id="slide-content" class="transition duration-500 ease-in-out">
-                </div>
+                <div id="slide-content" class="transition duration-500 ease-in-out"></div>
                 <div class="flex justify-center gap-4 mt-6">
                     <button id="prevBtn" class="bg-white text-black px-3 py-1 rounded hover:bg-gray-300">←</button>
                     <button id="nextBtn" class="bg-white text-black px-3 py-1 rounded hover:bg-gray-300">→</button>
@@ -68,9 +78,7 @@
         </div>
     </section>
 
-
-    <!-- Üritused -->
-    <section class="bg-[#f9f4ef] py-16">
+    <section id="uritused" class="bg-[#f9f4ef] py-16">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-xl font-semibold mb-8">Veeda koos meiega</h2>
             <div class="bg-black text-white rounded-xl overflow-hidden relative">
@@ -84,8 +92,7 @@
         </div>
     </section>
 
-    <!-- Meened -->
-    <section class="py-16 max-w-6xl mx-auto px-6">
+    <section id="epood" class="py-16 max-w-6xl mx-auto px-6">
         <h2 class="text-xl font-semibold mb-8">Meened</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="border rounded-xl p-4 text-center">
@@ -109,11 +116,10 @@
         </div>
     </section>
 
-    <!-- Annetuse sektsioon -->
     <section class="py-16 bg-blue-50">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
             <div class="md:w-1/2">
-                <h2 class="text-xl font-semibold mb-4">Aita Pandivere tuulikul püsida – iga annetus loeb!</h2>
+                <h2 class="text-xl font-semibold mb-4">Aita Pandivere tuulikul püsida - iga annetus loeb!</h2>
                 <p class="text-sm text-gray-600 mb-4">Sinu toetus aitab meil hoida ajaloolist tuulikut ja jagada selle
                     pärandit tulevastele põlvedele.</p>
                 <button class="bg-blue-900 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-800">Anneta</button>
@@ -124,11 +130,10 @@
         </div>
     </section>
 
-    <!-- Jalus -->
-    <footer class="bg-[#3a2a1f] text-white py-10 px-6">
+    <footer id="kontakt" class="bg-[#3a2a1f] text-white py-10 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-6 text-sm">
             <div>
-                <img src="./images/pandivere-12.svg" alt="Pandivere Tuulik logo" class="h-6 mb-2">
+                <img src="./images/pandivere-12.svg" alt="Pandivere Tuulik logo" class="h-12 filter invert mb-2">
                 <p>Pandivere Tuulik</p>
                 <p class="mt-2">+372 5887 8876</p>
                 <p>pandivere@tuulik.ee</p>
@@ -136,16 +141,16 @@
             <div>
                 <p class="font-semibold mb-2">Avaleht</p>
                 <ul>
-                    <li><a href="#" class="hover:underline">Ajalugu</a></li>
-                    <li><a href="#" class="hover:underline">Tuntumad inimesed</a></li>
-                    <li><a href="#" class="hover:underline">Üritused</a></li>
+                    <li><a href="#tuulikust" class="hover:underline">Ajalugu</a></li>
+                    <li><a href="#uritused" class="hover:underline">Üritused</a></li>
+                    <li><a href="#epood" class="hover:underline">E-Pood</a></li>
                 </ul>
             </div>
             <div>
                 <p class="font-semibold mb-2">E-Pood</p>
                 <ul>
-                    <li><a href="#" class="hover:underline">Annetamine</a></li>
-                    <li><a href="#" class="hover:underline">Kontakt</a></li>
+                    <li><a href="#epood" class="hover:underline">Annetamine</a></li>
+                    <li><a href="#kontakt" class="hover:underline">Kontakt</a></li>
                 </ul>
             </div>
             <div>
@@ -155,7 +160,7 @@
             </div>
         </div>
         <div class="text-center text-xs text-gray-400 mt-6">
-            © 2025 disain by <span class="underline">Anna-Maria Kiivikas</span>. All rights reserved.
+            © 2025 disain by <span class="underline">AMK</span>. All rights reserved.
         </div>
     </footer>
 
