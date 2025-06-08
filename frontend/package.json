@@ -1,0 +1,23 @@
+{
+  "name": "epood",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annamariakiivikas/loputoo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annamariakiivikas/loputoo/issues"
+  },
+  "homepage": "https://github.com/annamariakiivikas/loputoo#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}

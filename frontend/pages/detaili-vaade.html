@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puidust Tuulik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active-thumb {
+        border: 2px solid #000;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f8f0ed] text-[#4a2c2a] font-sans">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+
+
+      <body class="bg-[#f3efeb]">
+
+ <header id="header"
+        class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-24 py-5 bg-[#f3efeb] transition-colors duration-300 text-[#5f4234]">
+        <div class="w-[200px]">
+            <a href="../index.html">
+                <img id="lougou" src="../images/pandivere-12-t.svg" alt="Pandivere logo">
+            </a>
+        </div>
+        <nav id="navLinks" class="space-x-8 text-lg tracking-wide hidden md:flex items-center">
+            <a href="#tuulikust" class="hover:underline">Tuulikust</a>
+            <a href="#uritused" class="hover:underline">Üritused</a>
+            <a href="./pages/e-pood.html" class="hover:underline selected: font-semibold">E-Pood</a>
+            <a href="./pages/" class="hover:underline">Kontakt</a>
+            <a href="#ostukorv" class="hover:underline">Ostukorv (0)</a>
+            <button id="supportBtn"
+                class="bg-[#f3efeb] text-[#5f4234] px-12 py-1 border-2 border-[#5f4234] rounded-full text-base font-normal hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
+                Toeta tuulikut
+            </button>
+        </nav>
+    </header>
+
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-[#7b5c58] mb-6 mt-32">
+  <a href="index.html" class="hover:underline">Avaleht</a> &gt;
+  <a href="./e-pood.html" class="hover:underline">E-pood</a> &gt;
+  <a href="lastele.html" class="hover:underline">Lastele</a> &gt;
+  <span class="font-semibold text-[#4a2c2a]">Pandivere T-särk</span>
+</nav>
+
+        
+
+      <!-- Product Section -->
+      <div class="grid md:grid-cols-2 gap-12 ">
+        <!-- Image Carousel -->
+        <div>
+          <div class="relative mb-4 rounded-xl overflow-hidden">
+            <button onclick="prevImage()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 hover:bg-opacity-100">
+              &#10094;
+            </button>
+            <img id="main-image" src="../images/mängusasi tuulik.png" alt="Tuulik" class="w-full object-cover rounded-xl" />
+            <button onclick="nextImage()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2  hover:bg-opacity-100">
+              &#10095;
+            </button>
+          </div>
+          <div class="flex gap-3 justify-left">
+            <img src="../images/mänguasi tuulik.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
+            <img src="../images/tuulik2.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
+            <img src="../images/tuulik3.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
+            <img src="../images/tuulik4.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div>
+          <h1 class="text-4xl font-medium mb-2">Puidust Tuulik</h1>
+          <p class="text-2xl font-semibold mb-6">20€</p>
+          <p class="mb-4 text-base leading-relaxed">
+            Käsitsi valmistatud miniatuur, mis on inspireeritud ajaloolisest Pandivere Tuulikust. Tugevast tammepuust valmistatud mänguasi on loodud kestma — just nagu ehtne veski, mille järgi see loodi.
+Sobib suurepäraselt kingituseks, riiulikaunistuseks või lastetuppa, kus hinnatakse rahulikke ja looduslikke materjale.
+          </p>
+
+          <!-- Dropdown Info -->
+          <div class="mb-6">
+            <button onclick="toggleInfo()" class="text-left w-full flex justify-between items-center text-lg font-medium">
+              <span>Tooteinfo</span>
+              <span id="arrow">+</span>
+            </button>
+            <div id="info-content" class="hidden mt-2 text-base text-[#5e403d]">
+              <p>
+                Materjal: Eesti tammepuit <br>
+Mõõdud: ~12 × 18 cm <br>
+Käsitsi pöörlev tiivik <br>
+Viimistlus: looduslik (ilma keemiliste lakkideta) <br>
+Sobib alates 3. eluaastast <br>
+Valmistatud käsitööna Lääne-Virumaal <br>
+              </p>
+            </div>
+          </div>
+
+
+          <!-- Quantity & Button -->
+<div class="flex items-center gap-4 mb-6">
+  <!-- + / - nupud -->
+<div class="flex items-center gap-4">
+  <button onclick="changeQty(-1)" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#4a2c2a] text-xl text-[#4a2c2a] hover:bg-[#4a2c2a] hover:text-white transition">−</button>
+  <span id="qty" class="text-base text-[#4a2c2a] min-w-[1.5rem] text-center">1</span>
+  <button onclick="changeQty(1)" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#4a2c2a] text-xl text-[#4a2c2a] hover:bg-[#4a2c2a] hover:text-white transition">+</button>
+</div>
+
+
+  <!-- Lisa ostukorvi nupp -->
+  <button class="border border-[#4a2c2a] text-[#4a2c2a] rounded-full px-6 py-2 font-medium hover:bg-[#4a2c2a] hover:text-white transition">
+    Lisa ostukorvi
+  </button>
+</div>
+
+
+          <!-- Note -->
+           <h1 class="text-xl font-medium text-[#5e403d]">Hea teada!</h1>
+<p class="text-sm text-[#5e403d]">
+  Iga ostuga toetad Pandivere Tuuliku säilimist – kogu tulu läheb veski korrashoiuks, haridusprogrammideks ja kogukonnaürituste korraldamiseks. 
+  Iga tuulik on käsitsi tehtud ja natuke omanäoline – just nagu Pandivere küla ajalugu.
+</p>
+
+
+    <!-- JS -->
+    <script>
+      const thumbs = document.querySelectorAll('.thumb');
+      const mainImage = document.getElementById('main-image');
+      const images = Array.from(thumbs).map(thumb => thumb.src);
+      let currentIndex = 0;
+
+      thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+          thumbs.forEach(t => t.classList.remove('active-thumb'));
+          thumb.classList.add('active-thumb');
+          mainImage.src = thumb.src;
+          currentIndex = index;
+        });
+      });
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateMainImage();
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateMainImage();
+      }
+
+      function updateMainImage() {
+        mainImage.src = images[currentIndex];
+        thumbs.forEach((thumb, i) => {
+          thumb.classList.toggle('active-thumb', i === currentIndex);
+        });
+      }
+
+      function changeQty(change) {
+        const qtyEl = document.getElementById('qty');
+        let current = parseInt(qtyEl.innerText);
+        if (current + change >= 1) qtyEl.innerText = current + change;
+      }
+
+      function toggleInfo() {
+        const content = document.getElementById('info-content');
+        const arrow = document.getElementById('arrow');
+        content.classList.toggle('hidden');
+        arrow.textContent = content.classList.contains('hidden') ? '+' : '-';
+      }
+
+      // Alguses aktiveeri esimene thumbnail
+      thumbs[0].classList.add('active-thumb');
+    </script>
+  </body>
+</html>

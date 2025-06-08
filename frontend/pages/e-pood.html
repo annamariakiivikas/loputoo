@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pandivere Tuulik - Pood</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+
+    }
+  </style>
+</head>
+
+<body class="bg-[#f3efeb]">
+
+  <header id="header"
+    class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-24 py-5 bg-[#f3efeb] transition-colors duration-300 text-[#5f4234]">
+    <div class="w-[200px]">
+      <a href="../index.html">
+        <img id="lougou" src="../images/pandivere-12-t.svg" alt="Pandivere logo">
+      </a>
+    </div>
+    <nav id="navLinks" class="space-x-8 text-lg tracking-wide hidden md:flex items-center">
+      <a href="#tuulikust" class="hover:underline">Tuulikust</a>
+      <a href="#uritused" class="hover:underline">Üritused</a>
+      <a href="./pages/e-pood.html" class="hover:underline selected: font-semibold">E-Pood</a>
+      <a href="./kontakt.html" class="hover:underline">Kontakt</a>
+      <a href="#ostukorv" class="hover:underline">Ostukorv (0)</a>
+      <button id="supportBtn"
+        class="bg-[#f3efeb] text-[#5f4234] px-12 py-1 border-2 border-[#f3efeb] rounded-full text-base font-normal hover:bg-[#f3efeb] hover:text-[#f3efeb] transition">
+        <a href="./pages/annetusleht.html">Toeta tuulikut</a>
+      </button>
+    </nav>
+  </header>
+
+
+
+  <!-- Hero text -->
+  <section class="text-center mt-40 mb-20 py-10  space-y-2">
+    <h1 class="text-2xl md:text-4xl font-medium text-[#5f4234] -">Sinu ost aitab hoida tuule tiivas</h1>
+    <p class="text-base font-regular text-black">Iga ostuga toetad Pandivere tuulikut – kohta, kus iga toode valmib oma
+      kätega ja
+      kannab endas kohaliku looduse ja inimeste lugu.<br>
+      Siin on kõik omanäoline ja tehtud hoole ja hingega.</p>
+  </section>
+
+  <section class="flex justify-between items-center flex-wrap mt-10 mx-4 px-20 gap-y-2 text-sm">
+    <!-- Filter buttons -->
+    <div class="flex flex-wrap gap-1">
+      <button data-filter="Kõik"
+        class="filter-btn px-4 py-1.5 text-base font-medium rounded-full border-2 border-[#5f4234] hover:bg-[#5f4234] hover:text-[#f3efeb]">Kõik</button>
+      <button data-filter="Tekstiil"
+        class="filter-btn px-4 py-1.5 text-base font-medium rounded-full border-2 border-[#5f4234] hover:bg-[#5f4234] hover:text-[#f3efeb]">Tekstiil</button>
+      <button data-filter="Toidukaubad"
+        class="filter-btn px-4 py-1.5 text-base font-medium rounded-full border-2 border-[#5f4234] hover:bg-[#5f4234] hover:text-[#f3efeb]">Toidukaubad</button>
+      <button data-filter="Kingituseks"
+        class="filter-btn px-4 py-1.5 text-base font-medium rounded-full border-2 border-[#5f4234] hover:bg-[#5f4234] hover:text-[#f3efeb]">Kingituseks</button>
+      <button data-filter="Lastele"
+        class="filter-btn px-4 py-1.5 text-base font-medium rounded-full border-2 border-[#5f4234] hover:bg-[#5f4234] hover:text-[#f3efeb]">Lastele</button>
+    </div>
+
+    <!-- Sort dropdown -->
+    <div class="flex items-center gap-2">
+      <label for="sort" class="font-medium text-base">Sorteeri:</label>
+      <div class="relative">
+        <select id="sort"
+          class="appearance-none text-base border-2 border-[#5f4234] px-2.5 py-1 pr-7 rounded-full bg-[#F3EFEB]">
+          <option value="popular">Kõige populaarsemad</option>
+          <option value="price-asc">Odavamast kallimaks</option>
+          <option value="price-desc">Kallimast odavamaks</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+          <svg class="w-3.5 h-3.5 text-[#5f4234]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Products grid -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-6 mx-24">
+    <!-- Product 1 -->
+    <a href="detaili-vaade.html">
+      <div class="transition" data-category="Lastele">
+        <div class="w-full aspect-square mb-2">
+          <img src="../images/mängusasi tuulik.png" alt="Puidust tuulik"
+            class="object-cover w-full h-full rounded-lg hover:ring-2 hover:ring-[#5f4234] transition" />
+        </div>
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="text-xl text-[#5f4234]">Puidust tuulik</p>
+            <p class="text-base text-gray-500">Lastele</p>
+          </div>
+          <p class="text-xl font-semibold text-[#4b2e2b]">18€</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Product 2 -->
+    <div class="transition" data-category="Toidukaubad">
+      <div class="w-full aspect-square mb-2">
+        <img src="../images/kaer.png" alt="Toode 2"
+          class="object-cover w-full h-full rounded-lg hover:ring-2 hover:ring-[#5f4234] transition" />
+      </div>
+      <div class="flex justify-between items-start">
+        <div>
+          <p class="text-xl text-[#5f4234]">Pandivere kaerahelbed 500g</p>
+          <p class="text-base text-gray-500">Toiduained</p>
+        </div>
+        <p class="text-xl font-semibold text-[#5f4234]">3€</p>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="transition" data-category="Tekstiil">
+      <div class="w-full aspect-square mb-2">
+        <img src="../images/müts.png" alt="Toode 3"
+          class="object-cover w-full h-full rounded-lg hover:ring-2 hover:ring-[#5f4234] transition" />
+      </div>
+      <div class="flex justify-between items-start">
+        <div>
+          <p class="text-xl text-[#5f4234]">Pandivere Müts</p>
+          <p class="text-base text-gray-500">Tekstiil</p>
+        </div>
+        <p class="text-xl font-semibold text-[#5f4234]">10€</p>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="transition" data-category="Tekstiil">
+      <div class="w-full aspect-square mb-2">
+        <img src="../images/särk.png" alt="Toode 4"
+          class="object-cover w-full h-full rounded-lg hover:ring-2 hover:ring-[#5f4234] transition" />
+      </div>
+      <div class="flex justify-between items-start">
+        <div>
+          <p class="text-xl text-[#5f4234]">Pandivere T-särk</p>
+          <p class="text-base text-gray-500">Tekstiil</p>
+        </div>
+        <p class="text-xl font-semibold text-[#5f4234]">15€</p>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="transition" data-category="Kingituseks">
+      <div class="w-full aspect-square mb-2">
+        <img src="../images/kinkekomplekt.png" alt="Toode 5"
+          class="object-cover w-full h-full rounded-lg hover:ring-2 hover:ring-[#5f4234] transition" />
+      </div>
+      <div class="flex justify-between items-start">
+        <div>
+          <p class="text-xl text-[#5f4234]">Küpsiste kinkekomplekt</p>
+          <p class="text-base text-gray-500">Kingituseks</p>
+        </div>
+        <p class="text-xl font-semibold text-[#5f4234]">15€</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex justify-center my-10">
+    <button class="px-6 py-2 border border-[#5f4234] rounded-full hover:bg-[#5f4234] hover:text-white transition">Lae
+      rohkem</button>
+  </div>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const products = document.querySelectorAll("[data-category]");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        products.forEach((product) => {
+          const category = product.getAttribute("data-category");
+          if (filter === "Kõik" || category === filter) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+
+        // Aktiivse nupu stiil (valikuline)
+        filterButtons.forEach((btn) => btn.classList.remove("bg-[#5f4234]", "text-[#f3efeb]"));
+        button.classList.add("bg-[#5f4234]", "text-[#f3efeb]");
+
+
+      });
+    });
+
+  </script>
+  <script>
+    const sortSelect = document.getElementById("sort");
+    const productSection = document.querySelector("section.grid");
+
+    function extractPrice(product) {
+      const priceText = product.querySelector("p.font-semibold")?.innerText || "0€";
+      return parseFloat(priceText.replace("€", "").replace(",", "."));
+    }
+
+    function sortProductsByPrice(order = "asc") {
+      const productCards = Array.from(productSection.children);
+
+      const sorted = productCards.sort((a, b) => {
+        const priceA = extractPrice(a);
+        const priceB = extractPrice(b);
+        return order === "asc" ? priceA - priceB : priceB - priceA;
+      });
+
+      sorted.forEach(card => productSection.appendChild(card));
+    }
+
+    sortSelect.addEventListener("change", function () {
+      const value = sortSelect.value;
+
+      if (value === "price-asc") {
+        sortProductsByPrice("asc");
+      } else if (value === "price-desc") {
+        sortProductsByPrice("desc");
+      } else {
+        // "popular" või muu – siin võiks hiljem mingi muu sorteerimine olla
+        // hetkel ei tee midagi
+      }
+    });
+  </script>
+
+</body>
+
+</html>
