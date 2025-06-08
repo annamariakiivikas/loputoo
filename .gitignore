@@ -23,4 +23,4 @@ auth.json
 .vscode
 .zed
 .DS_Store
-styles/output.css
+frontend/styles/output.css

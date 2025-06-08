@@ -6,49 +6,55 @@
     <title>Võtke ühendust</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-[#f9f3ef] text-[#4a2c2a]">
+  <body class="bg-[#f9f3ef] text-[#5f4234]">
 
-    <!-- Sisu konteiner -->
-    <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10">
-      <!-- Vorm vasakul -->
-      <div>
-        <h1 class="text-2xl font-semibold mb-8">Võtke ühendust meiega</h1>
+   <body class="bg-[#f9f3ef] text-[#5f4234]">
+
+  <body class="bg-[#f9f3ef] text-[#5f4234]">
+
+  <!-- Keskjoondatud wrapper -->
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Vorm -->
+      <div class="w-full max-w-md mx-auto">
+        <h1 class="text-4xl font-medium mb-8 text-center md:text-left">Võtke ühendust meiega</h1>
 
         <form class="space-y-4" onsubmit="handleSubmit(event)">
           <input
             type="text"
             placeholder="Nimi"
-            class="w-full border border-[#4a2c2a] rounded-full px-4 py-2 bg-transparent placeholder:text-[#4a2c2a] focus:outline-none focus:ring-2 focus:ring-[#4a2c2a]"
+            class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
             required
           />
           <input
             type="email"
             placeholder="E-post"
-            class="w-full border border-[#4a2c2a] rounded-full px-4 py-2 bg-transparent placeholder:text-[#4a2c2a] focus:outline-none focus:ring-2 focus:ring-[#4a2c2a]"
+            class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
             required
           />
           <input
             type="text"
             placeholder="Teema"
-            class="w-full border border-[#4a2c2a] rounded-full px-4 py-2 bg-transparent placeholder:text-[#4a2c2a] focus:outline-none focus:ring-2 focus:ring-[#4a2c2a]"
+            class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
           />
           <textarea
             placeholder="Kirjuta midagi..."
             rows="5"
-            class="w-full border border-[#4a2c2a] rounded-2xl px-4 py-2 bg-transparent placeholder:text-[#4a2c2a] focus:outline-none focus:ring-2 focus:ring-[#4a2c2a]"
+            class="w-full border border-[#5f4234] rounded-2xl px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
           ></textarea>
 
           <button
             type="submit"
-            class="mt-2 px-6 py-2 border border-[#4a2c2a] rounded-full hover:bg-[#4a2c2a] hover:text-white transition"
+            class="mt-2 px-6 py-2 border border-[#5f4234] rounded-full hover:bg-[#5f4234] hover:text-[#f3efeb] transition"
           >
             Saada
           </button>
         </form>
       </div>
 
-      <!-- Kontaktinfo paremal -->
-      <div class="flex flex-col gap-6">
+      <!-- Kontaktinfo -->
+      <div class="w-full max-w-md mx-auto flex flex-col gap-6">
         <div>
           <h2 class="font-semibold text-sm mb-1">Telefon</h2>
           <p>+372 5867 8876</p>
@@ -57,30 +63,21 @@
           <h2 class="font-semibold text-sm mb-1">E-post</h2>
           <p>pandivere@tuulik.ee</p>
         </div>
-        <div>
-          <h2 class="font-semibold text-sm mb-1">Sotsiaalmeedia</h2>
-          <div class="flex gap-4 mt-2 text-xl">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
+    
+          
           </div>
         </div>
       </div>
+
     </div>
+  </div>
 
-    <!-- Font Awesome ikoonide jaoks -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Vorm submission placeholder -->
-    <script>
-      function handleSubmit(e) {
-        e.preventDefault();
-        alert("Sõnum saadetud! :)");
-      }
-    </script>
-  </body>
-</html>
+  
+  <!-- Vorm submission -->
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Sõnum saadetud! :)");
+    }
+  </script>
+</body>
