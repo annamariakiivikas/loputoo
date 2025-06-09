@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puidust Tuulik</title>
     <style>
+      html {
+        font-family: "Poppins", sans-serif;
+      }
+    
       .active-thumb {
         border: 2px solid #000;
       }
@@ -117,7 +121,47 @@
         </div>
       </div>
     </div>
-
+    <footer class="bg-[#5f4234] text-[#f3efeb] py-10 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-6 text-sm">
+        <div>
+          <img src="./images/pandivere-12-b.svg" alt="Pandivere Tuulik logo" class="h-20 w-auto mb-2">
+          <p class="mt-2">+372 5887 8876</p>
+          <p>pandivere@tuulik.ee</p>
+        </div>
+        <div>
+          <p class="mb-2 hover:underline">
+            <a href="./index.html">
+              Avaleht
+            </a>
+          </p>
+          <div class="flex flex-col space-y-2">
+            <a href="#tuulikust" class="hover:underline">Ajalugu</a>
+            <a href="#people" class="hover:underline">Tuntumad inimesed</a>
+            <a href="#uritused" class="hover:underline">Üritused</a>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 hover:underline">
+            <a href="./pages/e-pood.html">
+              E-Pood
+            </a>
+          </p>
+          <div class="flex flex-col space-y-2">
+            <a href="./pages/annetusleht.html" class="hover:underline">Annetamine</a>
+            <a href="./pages/kontakt.html" class="hover:underline">Kontakt</a>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 text-lg font-normal">Tuuleuudised otse postkasti!</p>
+          <input type="email" placeholder="Email" class="w-full bg-[#f3efeb] p-2 rounded-full mb-2 text-[#5f4234]">
+          <button
+            class="bg-[#5f4234] border border-[#f3efeb] text-[#f3efeb] px-4 py-1 rounded-full text-sm hover:bg-[#f3efeb] hover:text-[#5f4234]">Telli</button>
+        </div>
+      </div>
+      <div class="text-center text-xs font-normal mt-6">
+        © 2025 disain by <span class="underline">AMK</span>. All rights reserved.
+      </div>
+    </footer>
     <script src="../scripts/detaili-vaade.js"></script>
   </body>
 

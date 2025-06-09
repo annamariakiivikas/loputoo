@@ -5,21 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Annetus</title>
+  <style>
+    html {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
   <link rel="stylesheet" href="../styles/output.css">
 </head>
 
-<body class="bg-[#f9f3ef] text-[#5f4234] font-sans">
+<body class="bg-[#f3efeb] text-[#5f4234]">
 
   <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center min-h-screen">
-
-    <!-- Vasak pool: pilt (ainult alates sm ehk ≥640px) -->
     <div class="hidden sm:block">
       <div class="w-full h-64 md:h-auto bg-gray-200 rounded-2xl overflow-hidden">
-        <img src="../images/tuulik hero banner v02.png" class="w-full h-full object-cover" />
+        <img src="../images/annetus banner.png" class="w-full h-full object-cover" />
       </div>
     </div>
 
-    <!-- Parem pool: sisu -->
     <div class="flex flex-col gap-2 items-start text-left">
       <h1 class="text-3xl sm:text-4xl font-medium leading-snug">
         Aita Pandivere tuulikul püsida <br class="hidden sm:block" />– iga annetus loeb!
@@ -29,7 +31,6 @@
         püsima ka tulevastele põlvedele.
       </p>
 
-      <!-- Annetuse tüüp -->
       <div class="flex flex-wrap gap-2 mt-2">
         <button onclick="selectType(this)"
           class="donation-type border-2 border-[#5f4234] rounded-full px-4 py-2 hover:bg-[#5f4234] hover:text-[#f3efeb] transition">Püsiannetus</button>
@@ -38,8 +39,6 @@
           annetus</button>
       </div>
 
-      <!-- Summad -->
-      <!-- Summad -->
       <div class="flex flex-nowrap gap-2 mt-2 overflow-x-auto scrollbar-hide">
         <button onclick="selectAmount(this)"
           class="donation-amount border-2 border-[#5f4234] rounded-full px-3 py-2 hover:bg-[#5f4234] hover:text-[#f3efeb] transition [#f3efeb]space-nowrap">1€</button>
@@ -54,43 +53,60 @@
       </div>
 
 
-      <!-- Muu summa sisestusväli -->
       <div id="customAmountContainer" class="mt-2 w-full max-w-xs hidden">
         <input id="customAmountInput" type="number" min="1" placeholder="Sisesta summa (€)"
           class="w-full border-2 border-[#5f4234] rounded-full px-4 py-2 text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234] bg-[#F3EFEB]" />
       </div>
 
-      <!-- Edasi nupp -->
       <button
         class="mt-4 border-2 border-[#5f4234] rounded-full px-6 py-2 hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
         Edasi
       </button>
     </div>
+  </main>
+  <footer class="bg-[#5f4234] text-[#f3efeb] py-10 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-6 text-sm">
+      <div>
+        <img src="../images/pandivere-12-b.svg" alt="Pandivere Tuulik logo" class="h-20 w-auto mb-2">
+        <p class="mt-2">+372 5887 8876</p>
+        <p>pandivere@tuulik.ee</p>
+      </div>
+      <div>
+        <p class="mb-2 hover:underline">
+          <a href="./index.html">
+            Avaleht
+          </a>
+        </p>
+        <div class="flex flex-col space-y-2">
+          <a href="#tuulikust" class="hover:underline">Ajalugu</a>
+          <a href="#people" class="hover:underline">Tuntumad inimesed</a>
+          <a href="#uritused" class="hover:underline">Üritused</a>
+        </div>
+      </div>
+      <div>
+        <p class="mb-2 hover:underline">
+          <a href="./pages/e-pood.html">
+            E-Pood
+          </a>
+        </p>
+        <div class="flex flex-col space-y-2">
+          <a href="./pages/annetusleht.html" class="hover:underline">Annetamine</a>
+          <a href="./pages/kontakt.html" class="hover:underline">Kontakt</a>
+        </div>
+      </div>
+      <div>
+        <p class="mb-2 text-lg font-normal">Tuuleuudised otse postkasti!</p>
+        <input type="email" placeholder="Email" class="w-full bg-[#f3efeb] p-2 rounded-full mb-2 text-[#5f4234]">
+        <button
+          class="bg-[#5f4234] border border-[#f3efeb] text-[#f3efeb] px-4 py-1 rounded-full text-sm hover:bg-[#f3efeb] hover:text-[#5f4234]">Telli</button>
+      </div>
+    </div>
+    <div class="text-center text-xs font-normal mt-6">
+      © 2025 disain by <span class="underline">AMK</span>. All rights reserved.
+    </div>
+  </footer>
 
-
-    <script>
-      function selectAmount(button) {
-        document.querySelectorAll('.donation-amount').forEach(btn => {
-          btn.classList.remove('bg-[#5f4234]', 'text-[#f3efeb]');
-        });
-        button.classList.add('bg-[#5f4234]', 'text-[#f3efeb]');
-
-        const customAmountContainer = document.getElementById('customAmountContainer');
-        if (button.textContent.trim() === "Muu") {
-          customAmountContainer.classList.remove('hidden');
-        } else {
-          customAmountContainer.classList.add('hidden');
-          document.getElementById('customAmountInput').value = '';
-        }
-      }
-
-      function selectType(button) {
-        document.querySelectorAll('.donation-type').forEach(btn => {
-          btn.classList.remove('bg-[#5f4234]', 'text-[#f3efeb]');
-        });
-        button.classList.add('bg-[#5f4234]', 'text-[#f3efeb]');
-      }
-    </script>
+  <script src="../scripts/annetusleht.js"></script>
 </body>
 
 </html>
