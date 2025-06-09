@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="et">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Võtke ühendust</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-[#f9f3ef] text-[#5f4234]">
 
-   <body class="bg-[#f9f3ef] text-[#5f4234]">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Võtke ühendust</title>
+  <link rel="stylesheet" href="../styles/output.css">
+</head>
 
-  <body class="bg-[#f9f3ef] text-[#5f4234]">
+<body class="bg-[#f3efeb] text-[#5f4234]">
+  <header id="header"
+    class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-4 md:px-24 py-3 md:py-5 bg-[#f3efeb] transition-colors duration-300 text-[#5f4234]">
+    <div class="w-[120px] md:w-[200px]">
+      <a href="../index.html">
+        <img id="lougou" src="../images/pandivere-12-t.svg" alt="Pandivere logo">
+      </a>
+    </div>
+    <nav id="navLinks" class="space-x-2 md:space-x-8 text-sm md:text-lg tracking-wide hidden md:flex items-center">
+      <a href="../index.html#tuulikust" class="hover:underline">Tuulikust</a>
+      <a href="../index.html#uritused" class="hover:underline">Üritused</a>
+      <a href="./e-pood.html" class="hover:underline">E-Pood</a>
+      <a href="./kontakt.html" class="hover:underline font-semibold">Kontakt</a>
+      <a href="#ostukorv" class="hover:underline">Ostukorv (0)</a>
+      <button id="supportBtn"
+        class="bg-[#f3efeb] text-[#5f4234] px-6 md:px-12 py-1 border-2 border-[#5f4234] rounded-full text-sm md:text-base font-normal hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
+        <a href="./annetusleht.html">Toeta tuulikut</a>
+      </button>
+    </nav>
 
+    <button id="mobileMenuBtn" class="md:hidden text-[#5f4234] p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </header>
   <!-- Keskjoondatud wrapper -->
   <div class="min-h-screen flex items-center justify-center px-4">
     <div class="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-start">
@@ -21,33 +43,19 @@
         <h1 class="text-4xl font-medium mb-8 text-center md:text-left">Võtke ühendust meiega</h1>
 
         <form class="space-y-4" onsubmit="handleSubmit(event)">
-          <input
-            type="text"
-            placeholder="Nimi"
+          <input type="text" placeholder="Nimi"
             class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
-            required
-          />
-          <input
-            type="email"
-            placeholder="E-post"
+            required />
+          <input type="email" placeholder="E-post"
             class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Teema"
-            class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
-          />
-          <textarea
-            placeholder="Kirjuta midagi..."
-            rows="5"
-            class="w-full border border-[#5f4234] rounded-2xl px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]"
-          ></textarea>
+            required />
+          <input type="text" placeholder="Teema"
+            class="w-full border border-[#5f4234] rounded-full px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]" required/>
+          <textarea placeholder="Kirjuta midagi..." rows="5"
+            class="w-full border border-[#5f4234] rounded-2xl px-4 py-2 bg-transparent placeholder:text-[#5f4234] focus:outline-none focus:ring-2 focus:ring-[#5f4234]" required></textarea>
 
-          <button
-            type="submit"
-            class="mt-2 px-6 py-2 border border-[#5f4234] rounded-full hover:bg-[#5f4234] hover:text-[#f3efeb] transition"
-          >
+          <button type="submit"
+            class="mt-2 px-6 py-2 border border-[#5f4234] rounded-full hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
             Saada
           </button>
         </form>
@@ -63,16 +71,16 @@
           <h2 class="font-semibold text-sm mb-1">E-post</h2>
           <p>pandivere@tuulik.ee</p>
         </div>
-    
-          
-          </div>
-        </div>
-      </div>
 
+
+      </div>
     </div>
   </div>
 
-  
+  </div>
+  </div>
+
+
   <!-- Vorm submission -->
   <script>
     function handleSubmit(e) {

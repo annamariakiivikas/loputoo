@@ -1,5 +1,6 @@
 <<!DOCTYPE html>
-<html lang="et">
+  <html lang="et">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,85 +12,72 @@
     </style>
     <link rel="stylesheet" href="../styles/output.css">
   </head>
+
   <body class="bg-[#f8f0ed] text-[#5f4234] font-sans">
-    <!-- Header -->
-    <header
-      id="header"
-      class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-6 md:px-24 py-4 md:py-5 bg-[#f3efeb] transition-colors duration-300 text-[#5f4234]"
-    >
+    <header id="header"
+      class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-6 md:px-24 py-4 md:py-5 bg-[#f3efeb] transition-colors duration-300 text-[#5f4234]">
       <div class="w-[160px] md:w-[200px]">
         <a href="../index.html">
           <img id="lougou" src="../images/pandivere-12-t.svg" alt="Pandivere logo" />
         </a>
       </div>
-      <nav
-        id="navLinks"
-        class="hidden md:flex space-x-4 lg:space-x-8 text-sm md:text-lg tracking-wide items-center"
-      >
-        <a href="../index.html/#tuulikust" class="hover:underline">Tuulikust</a>
-        <a href="../index.html/#uritused" class="hover:underline">Üritused</a>
+      <nav id="navLinks" class="hidden md:flex space-x-4 lg:space-x-8 text-sm md:text-lg tracking-wide items-center">
+        <a href="../index.html#tuulikust" class="hover:underline">Tuulikust</a>
+        <a href="../index.html#uritused" class="hover:underline">Üritused</a>
         <a href="./e-pood.html" class="hover:underline font-semibold">E-Pood</a>
         <a href="./kontakt.html" class="hover:underline">Kontakt</a>
         <a href="#" class="hover:underline">Ostukorv (0)</a>
-        <button
-          id="supportBtn"
-          class="bg-[#f3efeb] text-[#5f4234] px-6 md:px-12 py-1 border-2 border-[#5f4234] rounded-full text-sm md:text-base font-normal hover:bg-[#5f4234] hover:text-[#f3efeb] transition"
-        >
+        <button id="supportBtn"
+          class="bg-[#f3efeb] text-[#5f4234] px-6 md:px-12 py-1 border-2 border-[#5f4234] rounded-full text-sm md:text-base font-normal hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
           Toeta tuulikut
         </button>
       </nav>
     </header>
 
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 pt-32">
-      <nav class="text-sm text-[#7b5c58] mb-6">
-        <a href="index.html" class="hover:underline">Avaleht</a> &gt;
-        <a href="./e-pood.html" class="hover:underline">E-pood</a> &gt;
-        <a class="cursor-default">Lastele</a> &gt;
-        <span class="font-semibold text-[#5f4234] cursor-default">Puidust Tuulik</span>
+      <nav class="text-sm text-[#7b5c58] mb-6 cursor-default">
+        <a href="index.html" class="cursor-pointer hover:underline">Avaleht</a> &gt;
+        <a href="./e-pood.html" class="cursor-pointer hover:underline">E-pood</a> &gt;
+        <a>Lastele</a> &gt;
+        <span class="font-semibold text-[#5f4234]">Puidust Tuulik</span>
       </nav>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <div>
           <div class="relative mb-4 rounded-xl overflow-hidden">
-            <button
-              onclick="prevImage()"
-              class="absolute left-2 top-1/2 -translate-y-1/2 bg-[#f3efeb] bg-opacity-70 rounded-full p-2 hover:bg-opacity-100"
-            >
+            <button onclick="prevImage()"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-[#f3efeb] bg-opacity-70 rounded-full p-2 hover:bg-opacity-100">
               &#10094;
             </button>
-            <img
-              id="main-image"
-              src="../images/mängusasi tuulik.png"
-              alt="Tuulik"
-              class="w-full object-cover rounded-xl"
-            />
-            <button
-              onclick="nextImage()"
-              class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#f3efeb] bg-opacity-70 rounded-full p-2 hover:bg-opacity-100"
-            >
+            <img id="main-image" src="../images/mängusasi tuulik.png" alt="Tuulik"
+              class="w-full object-cover rounded-xl" />
+            <button onclick="nextImage()"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#f3efeb] bg-opacity-70 rounded-full p-2 hover:bg-opacity-100">
               &#10095;
             </button>
           </div>
           <div class="flex flex-wrap gap-3">
-            <img src="../images/mänguasi tuulik.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
+            <img src="../images/mängusasi tuulik.png"
+              class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
             <img src="../images/tuulik2.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
             <img src="../images/tuulik3.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
             <img src="../images/tuulik4.png" class="thumb w-20 h-20 object-cover rounded-xl cursor-pointer border" />
           </div>
         </div>
 
-        <!-- Product Info -->
         <div>
           <h1 class="text-3xl md:text-4xl font-medium mb-2">Puidust Tuulik</h1>
           <p class="text-xl md:text-2xl font-semibold mb-6">20€</p>
           <p class="mb-4 text-base leading-relaxed">
-            Käsitsi valmistatud miniatuur, mis on inspireeritud ajaloolisest Pandivere Tuulikust. Tugevast tammepuust valmistatud mänguasi on loodud kestma — just nagu ehtne veski, mille järgi see loodi.
-            Sobib suurepäraselt kingituseks, riiulikaunistuseks või lastetuppa, kus hinnatakse rahulikke ja looduslikke materjale.
+            Käsitsi valmistatud miniatuur, mis on inspireeritud ajaloolisest Pandivere Tuulikust. Tugevast tammepuust
+            valmistatud mänguasi on loodud kestma — just nagu ehtne veski, mille järgi see loodi.
+            Sobib suurepäraselt kingituseks, riiulikaunistuseks või lastetuppa, kus hinnatakse rahulikke ja looduslikke
+            materjale.
           </p>
 
-          <!-- Dropdown Info -->
           <div class="mb-6">
-            <button onclick="toggleInfo()" class="text-left w-full flex justify-between items-center text-lg font-medium">
+            <button onclick="toggleInfo()"
+              class="text-left w-full flex justify-between items-center text-lg font-medium">
               <span>Tooteinfo</span>
               <span id="arrow">+</span>
             </button>
@@ -105,14 +93,16 @@
             </div>
           </div>
 
-          <!-- Quantity & Add to Cart -->
           <div class="flex flex-wrap md:flex-nowrap items-center gap-4 mb-6">
             <div class="flex items-center gap-4">
-              <button onclick="changeQty(-1)" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#5f4234] text-xl hover:bg-[#5f4234] hover:text-[#f3efeb]">−</button>
+              <button onclick="changeQty(-1)"
+                class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#5f4234] text-xl hover:bg-[#5f4234] hover:text-[#f3efeb]">−</button>
               <span id="qty" class="text-base min-w-[1.5rem] text-center">1</span>
-              <button onclick="changeQty(1)" class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#5f4234] text-xl hover:bg-[#5f4234] hover:text-[#f3efeb]">+</button>
+              <button onclick="changeQty(1)"
+                class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#5f4234] text-xl hover:bg-[#5f4234] hover:text-[#f3efeb]">+</button>
             </div>
-            <button class="flex-grow border border-[#5f4234] text-[#5f4234] rounded-full px-6 py-2 font-medium hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
+            <button
+              class="flex-grow border border-[#5f4234] text-[#5f4234] rounded-full px-6 py-2 font-medium hover:bg-[#5f4234] hover:text-[#f3efeb] transition">
               Lisa ostukorvi
             </button>
           </div>
@@ -120,64 +110,15 @@
           <!-- Note -->
           <h2 class="text-xl font-medium text-[#5e403d] mb-1">Hea teada!</h2>
           <p class="text-sm text-[#5e403d]">
-            Iga ostuga toetad Pandivere Tuuliku säilimist – kogu tulu läheb veski korrashoiuks, haridusprogrammideks ja kogukonnaürituste korraldamiseks.
+            Iga ostuga toetad Pandivere Tuuliku säilimist – kogu tulu läheb veski korrashoiuks, haridusprogrammideks ja
+            kogukonnaürituste korraldamiseks.
             Iga tuulik on käsitsi tehtud ja natuke omanäoline – just nagu Pandivere küla ajalugu.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- FontAwesome (if used) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- JS -->
-    <script>
-      const thumbs = document.querySelectorAll('.thumb');
-      const mainImage = document.getElementById('main-image');
-      const images = Array.from(thumbs).map((thumb) => thumb.src);
-      let currentIndex = 0;
-
-      thumbs.forEach((thumb, index) => {
-        thumb.addEventListener('click', () => {
-          thumbs.forEach((t) => t.classList.remove('active-thumb'));
-          thumb.classList.add('active-thumb');
-          mainImage.src = thumb.src;
-          currentIndex = index;
-        });
-      });
-
-      function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateMainImage();
-      }
-
-      function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateMainImage();
-      }
-
-      function updateMainImage() {
-        mainImage.src = images[currentIndex];
-        thumbs.forEach((thumb, i) => {
-          thumb.classList.toggle('active-thumb', i === currentIndex);
-        });
-      }
-
-      function changeQty(change) {
-        const qtyEl = document.getElementById('qty');
-        let current = parseInt(qtyEl.innerText);
-        if (current + change >= 1) qtyEl.innerText = current + change;
-      }
-
-      function toggleInfo() {
-        const content = document.getElementById('info-content');
-        const arrow = document.getElementById('arrow');
-        content.classList.toggle('hidden');
-        arrow.textContent = content.classList.contains('hidden') ? '+' : '-';
-      }
-
-      // Init
-      thumbs[0].classList.add('active-thumb');
-    </script>
+    <script src="../scripts/detaili-vaade.js"></script>
   </body>
-</html>
+
+  </html>
